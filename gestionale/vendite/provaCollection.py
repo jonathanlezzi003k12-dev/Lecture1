@@ -67,6 +67,8 @@ tot, *altri_campi=calcola_statistiche_carrello(carrello)#non
 print (tot)
 
 
+s=set()
+s1=set()
     #set
 categorie={"gold","silver","bronze","gold"}
 print (categorie)
@@ -74,6 +76,28 @@ print(len(categorie))
 categorie2={"Platinum, Elite"}
 categorie_all=categorie|categorie2#unione
 print (categorie_all)
+
+
+
+
+#togliere
+s.remove(elem)#rimuovere elemento e si arrabbia se non c'è
+s.discard(elem)#rimuove senza arrabbiarsi
+s.pop()#rimuove e restituisce un elemento
+s.clear()
+
+
+#operazioni insiemistiche
+s.union(s1)#unione di due set
+s.intersection(s1)#intersezione
+s.difference(s1)#elemnti di s che non sono contenuti in s1
+s.symmetric_deifference(s1)#elementi di s1 non contenuti in s e il viceversa
+
+s1.issubset(s)
+s1.issuperset(s)
+s1.isdisjont(s)
+
+
 
 
 
