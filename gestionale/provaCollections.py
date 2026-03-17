@@ -172,7 +172,7 @@ for k in keys:
 for v in values:
     print(v)
 
-for key, val in catalogo.items():
+for key, val in catalogo.items():#il metodo .items serve per restiturmi delle tuple che in questo caso contengono chiave valore
     print(f"Cod {key} è associata a: {val}")
 
 #rimuovere dal dizionario
@@ -215,28 +215,29 @@ ordini_da_processare.append((o3, 3))
 ordini_da_processare.append((o4, 45))
 
 """2) Memorizzare i CF dei clienti (univoco)"""
-# Collection?
+# Collection? Set
 codici_fiscali = {"ajnfkefioe231", "ajnsow241", "njknaskm1094", "ajnsow241"}
 print(codici_fiscali)
 
 """3) Creare un database di prodotti che posso cercare con un codice univoco"""
-# Collection?
+# Collection? Dizionario
 listino_prodotti = {"LAP0001" : ProdottoRecord("Laptop", 1200.0),
                     "KEY001" : ProdottoRecord("Keyboard", 20.0)}
 
 """4) Memorizzare le coordinate gps della nuova sede di Roma"""
-# Collection?
+# Collection? Tupla
 magazzino_roma = (45, 6)
 
 """5) Tenere traccia delle categorie di clienti che hanno fatto un ordine in un certo range temporale"""
-# Collection?
+# Collection? Set
 categorie_periodo = set()
 categorie_periodo.add("Gold")
 categorie_periodo.add("Bronze")
 
 print("=============================================================")
 print("Counter")
-#COUNTER
+#COUNTER STRUTTURA PIù AVANZATA
+#molto comodo per fare processing di tipo statistico su questa struttura dati
 lista_clienti = [
     ClienteRecord("Mario Rossi", "mario@polito.it", "Gold"),
     ClienteRecord("Mario Bianchi", "bianchi@polito.it", "Silver"),
@@ -256,10 +257,10 @@ print("Distribuzione categorie clienti")
 print(categorie_counter)
 
 print("2 Categorie più frequent1")
-print(categorie_counter.most_common(2))
+print(categorie_counter.most_common(2))#il numero due indica quanti elementi prendere che sono più frequenti
 
 print("totale:")
-print(categorie_counter.total())
+print(categorie_counter.total())#fa ala somma di tutte le categorie
 
 vendite_gennaio = Counter(
     {"Laptop": 13, "Tablet": 15}
